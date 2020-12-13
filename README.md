@@ -13,3 +13,8 @@ optional arguments:
   -p PORT, --port PORT  port
 
 ```
+
+## TODO
+- [x] first alpha version
+- [ ] code linting
+- [ ] multi-port scanner
