@@ -3,16 +3,19 @@ import argparse
 
 
 def scan(ip, port):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(3)
-    result = s.connect_ex((ip, port))
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(0.5)
+        result = s.connect_ex((ip, port))
 
-    if result == 0:
-        print('Port ' + ip + ':' + str(port) + ' is open')
-    else:
-        print('Port ' + ip + ':' + str(port) + ' is closed')
+        if result == 0:
+            print('Port ' + ip + ':' + str(port) + ' is open')
+        else:
+            print('Port ' + ip + ':' + str(port) + ' is closed')
 
-    s.close()
+        s.close()
+    except Exception:
+        pass
 
 
 if __name__ == '__main__':

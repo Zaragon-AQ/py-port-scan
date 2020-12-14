@@ -10,7 +10,7 @@ pyscan.py [-h] -i IP -p PORT
 optional arguments:
   -h, --help            show this help message and exit
   -i IP, --ip IP        host or ip
-  -p PORT, --port PORT  port
+  -p PORT, --port PORT  one or more ports with ',' separator
 
 ```
 
