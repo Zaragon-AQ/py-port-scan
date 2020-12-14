@@ -17,4 +17,5 @@ optional arguments:
 ## TODO
 - [x] first alpha version
 - [ ] code linting
-- [x] multi-port scanner
+- [x] multi ports
+- [ ] range ports 
