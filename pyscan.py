@@ -2,7 +2,6 @@ import argparse
 import socket
 
 
-
 def scan(ip, port):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,7 +18,7 @@ def scan(ip, port):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--ip", required=True, help="host or ip")
     ap.add_argument(
