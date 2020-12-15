@@ -1,5 +1,6 @@
-import socket
 import argparse
+import socket
+
 
 
 def scan(ip, port):
@@ -9,9 +10,9 @@ def scan(ip, port):
         result = s.connect_ex((ip, port))
 
         if result == 0:
-            print('Port ' + ip + ':' + str(port) + ' is open')
+            print("Port " + ip + ":" + str(port) + " is open")
         else:
-            print('Port ' + ip + ':' + str(port) + ' is closed')
+            print("Port " + ip + ":" + str(port) + " is closed")
 
         s.close()
     except Exception:
@@ -21,7 +22,9 @@ def scan(ip, port):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--ip", required=True, help="host or ip")
-    ap.add_argument("-p", "--port", required=True, help="one or more ports with ',' separator")
+    ap.add_argument(
+        "-p", "--port", required=True, help="one or more ports with ',' separator"
+    )
 
     args = vars(ap.parse_args())
     ports = args["port"].split(",")
